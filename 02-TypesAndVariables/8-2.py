@@ -1,16 +1,15 @@
 ###
-# A program that reads temperature in degrees Celsius from the keyboard.
-# Use comments to briefly describe the program's algorithm.
+# Calculation of circle area and circumference 
 #
 
-celsius = int(input("Celsius: "))
+# determine radius and PI values
+r = float(input("Enter radius: "))
+pi = 3.14 # would've used a library, but this seems like what the author meant
 
-# calculate fahrenheit
-fahrenheit = celsius * 9 // 5 + 32
-
-# calculate kelvin
-kelvin = celsius + 273
-
+# calculate area
+area = r ** 2 * pi
+# calculate circumference
+circumference = r * 2 * pi
 # print results
-print(f"Fahrenheit: {fahrenheit}")
-print(f"Kelvin: {kelvin}")
+print(f"Area: {area}")
+print(f"Circumference: {circumference}")

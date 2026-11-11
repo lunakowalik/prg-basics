@@ -1,11 +1,16 @@
 ###
-# A program that prints your height both in cm and in feet and inches.
+# A program that reads temperature in degrees Celsius from the keyboard.
+# Use comments to briefly describe the program's algorithm.
 #
-import math
 
-cm = 170
-feet = math.floor(cm / 30.48)
-inches = round((cm - (feet * 30.48)) * 0.39)
-# calculate the number of feet
+celsius = int(input("Celsius: "))
 
-print(f'I am {cm}cm tall, i.e. {feet} feet and {inches} inches')
+# calculate fahrenheit
+fahrenheit = celsius * 9 // 5 + 32
+
+# calculate kelvin
+kelvin = celsius + 273
+
+# print results
+print(f"Fahrenheit: {fahrenheit}")
+print(f"Kelvin: {kelvin}")
