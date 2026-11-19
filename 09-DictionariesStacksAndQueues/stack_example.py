@@ -10,22 +10,24 @@ on the top is the first one you'll take off.
 """
 
 # creates a stack
-cards = queue.LifoQueue()
+numbers = queue.LifoQueue()
 
-# adds elements to the top of the stack
-cards.put('King of Hearts \u2665')    
-cards.put('Queen of Diamonds \u2666')  
-cards.put('Jack of Spades \u2660')     
+numbers.put(2)
+numbers.put(3)
+numbers.put(7)
+numbers.put(4)
+numbers.put(1)
+numbers.put(9)
+numbers.put(8)
 
-## prints number of elements of the stack
-print('Number of stack elements:', cards.qsize())
+print("Sum of two last numbers:", numbers.get() + numbers.get())
 
-# removes and prints elements from the top of the stack
-while not cards.empty():
-    card = cards.get()
-    print(card)
+s = 0
+while True:
+    try:
+        n = numbers.get(False)
+    except queue.Empty:
+        break
+    s += n
 
-"""
-Note the order of the printed elements.
-The last added element is printed first.
-"""
+print("Sum of rest:", s)
