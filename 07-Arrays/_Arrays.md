@@ -497,7 +497,6 @@ stalj@uek.krakow.pl
    20-element array filled with 0 or 1 randomly
    two dimensional array with five rows and two columns filled with False
    ```
- > **Hint: Don't forget to import the random module before using random.randint**
 
 1. An array contains integer numbers: 34,7,19,4,21,8. Create a program that calculates and prints the number of even values in the array. Use the ‘while’ loop statement.
 
