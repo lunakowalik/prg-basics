@@ -4,6 +4,7 @@ class TV:
       self.is_on = False
       self.channel_no = 1
       self.channels = []
+      self.volume = 0
 
    def turn_off(self):
       self.is_on = False
@@ -30,3 +31,11 @@ class TV:
       print("Channel list:")
       for i, channel in enumerate(self.channels, 1):
          print(f"{i}. {channel}")
+
+   def increase_volume(self):
+      if self.volume < 10:
+         self.volume += 1
+
+   def decrease_volume(self):
+      if self.volume > 0:
+         self.volume -= 1
