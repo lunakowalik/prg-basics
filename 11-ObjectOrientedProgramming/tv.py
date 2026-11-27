@@ -13,7 +13,10 @@ class TV:
 
    def show_status(self):
       if self.is_on:
-         print(f"TV is on, channel {self.channel_no}")
+         channel_name = ""
+         if 1 <= self.channel_no <= len(self.channels):
+            channel_name = f" ({self.channels[self.channel_no - 1]})"
+         print(f"TV is on, channel {self.channel_no}{channel_name}, volume {self.volume}")
       else:
          print("TV is off")
 
