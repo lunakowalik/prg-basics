@@ -3,6 +3,7 @@ class TV:
    def __init__(self):
       self.is_on = False
       self.channel_no = 1
+      self.channels = []
 
    def turn_off(self):
       self.is_on = False
@@ -18,3 +19,11 @@ class TV:
 
    def set_channel(self, new_channel_no):
       self.channel_no = new_channel_no
+
+   def set_channels(self, channels_list):
+      self.channels = channels_list
+
+   def show_channels(self):
+      print("Channel list:")
+      for i, channel in enumerate(self.channels, 1):
+         print(f"{i}. {channel}")
