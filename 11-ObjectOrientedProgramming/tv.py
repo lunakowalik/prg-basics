@@ -15,3 +15,6 @@ class TV:
          print(f"TV is on, channel {self.channel_no}")
       else:
          print("TV is off")
+
+   def set_channel(self, new_channel_no):
+      self.channel_no = new_channel_no
